@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .labels {
+            text-align: right;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            background-color: #F5DEB3;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #E5CDA3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="labels">
+        <div class="form-group">Full Name:</div>
+        <div class="form-group">Username:</div>
+        <div class="form-group">Password:</div>
+        <div class="form-group">Re Password:</div>
+        <div class="form-group">Address:</div>
+        <div class="form-group">Age:</div>
+        <div class="form-group">Gender:</div>
+        <div class="form-group"></div>
+    </div>
+
+    <div class="inputs">
+        <div class="form-group"><input type="text" value="Vincent Maverick Durano"></div>
+        <div class="form-group"><input type="text" value="Vinz"></div>
+        <div class="form-group"><input type="password" value="********"></div>
+        <div class="form-group"><input type="password" value="********"></div>
+        <div class="form-group"><input type="text" value="Cebu, Philippines"></div>
+        <div class="form-group"><input type="number" value="22"></div>
+        <div class="form-group">
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="form-group"><button type="submit">Save</button></div>
+    </div>
+</div>
+
+</body>
+</html>
