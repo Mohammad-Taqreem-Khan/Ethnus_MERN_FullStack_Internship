@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #91344c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-container {
+            background: white;
+            padding: 20px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .register-container label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .register-container input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gender {
+            display: flex;
+            align-items: center;
+        }
+        .gender input {
+            margin-left: 10px;
+        }
+        .register-btn {
+            background: #ffffff;
+            color: black;
+            font-size: 16px;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .register-btn:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Register</h2>
+
+        <label>Name:</label>
+        <input type="text" placeholder="your name">
+        
+        <label>Email:</label>
+        <input type="email" placeholder="your email">
+        
+        <label>Password:</label>
+        <input type="password" placeholder="your password">
+        
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="your phone number">
+        
+        <label>Gender:</label>
+        <div class="gender">
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+        
+        <label>Language:</label>
+        <select>
+            <option>Select language</option>
+            <option>English</option>
+            <option>Spanish</option>
+            <option>French</option>
+        </select>
+        
+        <label>Zip Code:</label>
+        <input type="text" placeholder="your zip code">
+        
+        <label>About:</label>
+        <textarea rows="3" placeholder="Write about yourself..."></textarea>
+        
+        <button class="register-btn">Register</button>
+    </div>
+
+</body>
+</html>
