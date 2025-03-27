@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin-top: 50px;
+            overflow: hidden;
+        }
+
+        #train {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 150px;
+            transition: all 0.1s linear;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="color: green;">Task-7</h2>
+    <h3>Click the following buttons to handle animation</h3>
+
+    <div class="container">
+        <img id="train" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Steam_train.gif" alt="Train">
+    </div>
+
+    <div class="buttons">
+        <button onclick="startAnimation()">Start</button>
+        <button onclick="stopAnimation()">Stop</button>
+    </div>
+
+    <script>
+        let train = document.getElementById("train");
+        let position = 0;
+        let interval;
+
+        function startAnimation() {
+            if (!interval) {
+                interval = setInterval(() => {
+                    position += 5;
+                    if (position > window.innerWidth) position = -150;
+                    train.style.left = position + "px";
+                }, 50);
+            }
+        }
+
+        function stopAnimation() {
+            clearInterval(interval);
+            interval = null;
+        }
+    </script>
+
+</body>
+</html>
